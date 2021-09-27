@@ -6,13 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="354dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/text_editor"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/clear_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="228dp"
+        android:text="@string/compile"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="59dp"
+        android:layout_height="249dp"
+        android:layout_marginStart="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="88dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
